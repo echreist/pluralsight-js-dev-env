@@ -4,10 +4,10 @@ import {getUsers} from './api/userApi';
 
 //Populate table of users via API call
 getUsers().then(result => {
-	let userBody = "";
+	var userBody = "";
 
 	result.forEach(user => {
-		usersBody += `<tr>
+		userBody += `<tr>
 		<td><a href="#" data-id="${user.id}" class="deleteUser">Delete</a></td>
 		<td>${user.id}</td>
 		<td>${user.firstName}</td>
